@@ -7,11 +7,11 @@ export default function Header(){
 
             <nav>
                 <ul>
-                    <li><a>Play</a></li>
-                    <li><a>Learn</a></li>
-                    <li><a>Watch</a></li>
-                    <li><a>Community</a></li>
-                    <li><a>Tools</a></li>
+                    <li><a href="#">Play</a></li>
+                    <li><a href="#">Learn</a></li>
+                    <li><a href="#">Watch</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Tools</a></li>
                 </ul>
             </nav>
         </div>
