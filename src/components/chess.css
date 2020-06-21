@@ -126,6 +126,10 @@ li {
 .chess-chat input {
     border: none;
     background: transparent;
+    padding: 0.2rem 4%;
+    display: block;
+    width: 90%;
+    margin: 1%;
 }
 
 .uncopyable {
