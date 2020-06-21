@@ -1,0 +1,138 @@
+:root {
+    --bg-dark: #161512;
+    --color-primary: #262421;
+    --color-secondary: #302E2C;
+    --color-text: #bababa
+}
+
+body {
+    background: var(--bg-dark);
+    background: #161512 linear-gradient(to bottom, #2e2a24, #161512 116px) no-repeat;
+    color: var(--color-text);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    display: flex;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: xx-large;
+}
+
+.header nav{
+    flex: 1;
+    display: flex;
+}
+
+.header nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header nav li{
+    padding: 1rem;
+}
+
+.chess-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.chess {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: minmax(230px, 20vw) minmax(calc(70vmin * var(--board-scale)), calc(100vh * var(--board-scale) - calc(var(--site-header-height) + var(--site-header-margin)) - 3rem)) minmax(240px, 400px);
+    grid-template-rows: fit-content(0);
+    grid-template-areas:
+        'side board details'
+        'uchat under .';
+    width: 70%;
+    height: 100%;
+    grid-gap: 2vmin;
+}
+
+.chess-chat {
+    grid-area: side;
+}
+
+.chess-win-lose-panel {
+    grid-area: under;
+}
+
+.chess-board {
+    grid-area: board;
+}
+
+.chess-round-details {
+    grid-area: details;
+}
+
+.chess-chat nav ul,  .logo, .chess-wrap, .chess-chat-wrap, .chess-win-lose-panel, .chess-board, .chess-round-details  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo, .header li, .chess-chat, .chess-win-lose-panel, .chess-board, .chess-round-details {
+    cursor: pointer;
+}
+
+.chess-chat, .chess-win-lose-panel, .chess-board, .chess-round-details  {
+    background: var(--color-primary);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+}
+
+.chess-board {
+    padding: 1rem;
+}
+
+.chess-chat nav, .chess-chat ul {
+    width: 100%;
+}
+
+.chess-chat ul {
+    justify-content: space-around !important;
+}
+
+.chess-chat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.chess-chat nav li{
+    padding: 0.5rem 0;
+    width: 50%;
+}
+
+.chess-chat nav li:not(.active){
+    background: var(--bg-dark);
+}
+
+.chess-chat input {
+    border: none;
+    background: transparent;
+}
+
+.uncopyable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
